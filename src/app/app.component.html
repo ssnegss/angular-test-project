@@ -1,3 +1,30 @@
-<h1>{{ title }}</h1>
+<div class="main">
+  <h1>{{ title }}</h1>
 
-<app-item></app-item>
+  <app-item></app-item>
+
+  <form>
+    <div>
+      <label>Название</label>
+      <input
+        type="text"
+        [(ngModel)]="loginForm.name"
+        id="name"
+        required
+        name="name"
+      />
+    </div>
+    <div>
+      <label>Описание</label>
+      <input
+        type="text"
+        [(ngModel)]="loginForm.description"
+        id="description"
+        required
+        name="description"
+      />
+    </div>
+
+    <button (click)="printForm()">Войти</button>
+  </form>
+</div>
