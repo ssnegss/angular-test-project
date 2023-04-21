@@ -10,14 +10,4 @@ import { IItem } from './models/item';
 export class AppComponent {
   title = 'angular app';
 
-  loginForm: IItem = {
-    name: '',
-    description: '',
-    creationDate: new Date(),
-    completionDate: new Date(),
-  };
-
-  printForm() {
-    console.log(this.loginForm);
-  }
 }

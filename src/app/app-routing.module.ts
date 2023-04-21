@@ -1,10 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { EditingPageComponent } from './pages/editing-page/editing-page.component';
+import { ViewPageComponent } from './pages/view-page/view-page.component';
+
+const routes: Routes = [
+  { path: 'edit', component: EditingPageComponent },
+  { path: 'view', component: ViewPageComponent },
+
+  // otherwise redirect to home
+  { path: '**', redirectTo: 'view' },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
