@@ -8,6 +8,6 @@ import { IItem } from './models/item';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'angular app';
-
+  viewPageButtonName: string = 'View Page';
+  editPageButtonName: string = 'Edit Page';
 }
