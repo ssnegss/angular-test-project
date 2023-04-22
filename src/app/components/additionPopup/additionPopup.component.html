@@ -16,10 +16,10 @@
     >
       Описание
     </tui-input>
-    <inputDateTime
-      name="completionDate"
-      formControlName="completionDateFieldForm"
-    ></inputDateTime>
+    <tui-input-date-time toNativeDate formControlName="completionDateFieldForm">
+      Дата и время
+      <input tuiTextfield placeholder="" />
+    </tui-input-date-time>
     <p>
       <button tuiButton type="submit" (click)="onSubmit()">Ok</button>
     </p>

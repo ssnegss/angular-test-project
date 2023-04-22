@@ -12,6 +12,4 @@ export class ItemComponent {
     creationDate: new Date(),
     completionDate: new Date(),
   };
-
-  // @Input() myItem: IItem;
 }

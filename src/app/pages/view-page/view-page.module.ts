@@ -4,7 +4,6 @@ import { TuiButtonModule } from '@taiga-ui/core';
 
 import { ViewPageComponent } from './view-page.component';
 import { AdditionalPopupModule } from '../../components/additionPopup/additionPopup.module';
-import { ButtonComponent } from '../../components/button/button.component';
 import { TuiInputModule } from '@taiga-ui/kit';
 import { TuiRootModule, TuiDialogModule } from '@taiga-ui/core';
 

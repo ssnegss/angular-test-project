@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-// import moment from 'moment';
 import { IItem } from '../../models/item';
 
 @Component({
@@ -26,17 +25,32 @@ export class AdditionPopupComponent {
 
   showDialog(): void {
     this.open = true;
-    // console.log(this.item);
   }
 
+  convertTuiTime = () => {
+    const getDate = this.popupForm.controls.completionDateFieldForm;
+    const getDay = getDate.value[0];
+    const getTime = getDate.value[1];
+    const inputCompletionDate = new Date(
+      getDay.year,
+      getDay.month,
+      getDay.day,
+      getTime.hours,
+      getTime.minutes
+    );
+    return inputCompletionDate;
+  };
+
   onSubmit() {
+    const inputCompletionDate = this.convertTuiTime();
+
     const item: IItem = {
       name: this.popupForm.controls.nameFieldForm.value,
       description: this.popupForm.controls.descriptionFieldForm.value,
       creationDate: new Date(),
-      completionDate: this.popupForm.controls.completionDateFieldForm.value,
+      completionDate: inputCompletionDate,
     };
     this.popupForm.reset();
-    console.log(item);
+    console.log(item.completionDate);
   }
 }
