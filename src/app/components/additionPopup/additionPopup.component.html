@@ -6,15 +6,22 @@
 >
   <form [formGroup]="popupForm" (ngSubmit)="observer.complete()">
     <p>Добавьте название, описание и дату выполнения</p>
-    <tui-input tuiAutoFocus formControlName="nameFieldForm">
+    <tui-input tuiAutoFocus formControlName="nameFieldForm" name="name">
       Название
     </tui-input>
-    <tui-input tuiAutoFocus formControlName="descriptionFieldForm">
+    <tui-input
+      tuiAutoFocus
+      formControlName="descriptionFieldForm"
+      name="descriprion"
+    >
       Описание
     </tui-input>
-    <inputDateTime></inputDateTime>
+    <inputDateTime
+      name="completionDate"
+      formControlName="completionDateFieldForm"
+    ></inputDateTime>
     <p>
-      <button tuiButton type="submit">Ok</button>
+      <button tuiButton type="submit" (click)="onSubmit()">Ok</button>
     </p>
   </form>
 </ng-template>

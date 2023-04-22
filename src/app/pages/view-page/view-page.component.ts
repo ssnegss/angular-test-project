@@ -6,14 +6,14 @@ import { IItem } from '../../models/item';
   templateUrl: 'view-page.component.html',
 })
 export class ViewPageComponent {
-  loginForm: IItem = {
-    name: '',
-    description: '',
-    creationDate: new Date(),
-    completionDate: new Date(),
-  };
+  // item: IItem = {
+  //   name: '',
+  //   description: '',
+  //   creationDate: new Date(),
+  //   completionDate: new Date(),
+  // };
 
-  printForm() {
-    console.log(this.loginForm);
-  }
+  // printForm() {
+  //   console.log(this.item);
+  // }
 }
