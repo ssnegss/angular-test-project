@@ -3,13 +3,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TuiButtonModule } from '@taiga-ui/core';
 
 import { ViewPageComponent } from './view-page.component';
-import { AdditionPopupComponent } from '../../components/additionPopup/additionPopup.component';
+import { AdditionalPopupModule } from '../../components/additionPopup/additionPopup.module';
 import { ButtonComponent } from '../../components/button/button.component';
 import { TuiInputModule } from '@taiga-ui/kit';
 import { TuiRootModule, TuiDialogModule } from '@taiga-ui/core';
 
 @NgModule({
-  declarations: [ViewPageComponent, AdditionPopupComponent],
+  declarations: [ViewPageComponent],
   imports: [
     FormsModule,
     TuiButtonModule,
@@ -17,6 +17,7 @@ import { TuiRootModule, TuiDialogModule } from '@taiga-ui/core';
     TuiRootModule,
     ReactiveFormsModule,
     TuiInputModule,
+    AdditionalPopupModule,
   ],
   providers: [],
 })

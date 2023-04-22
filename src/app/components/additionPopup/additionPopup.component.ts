@@ -7,8 +7,9 @@ import { FormControl, FormGroup } from '@angular/forms';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AdditionPopupComponent {
-  exampleForm = new FormGroup({
-    exampleControl: new FormControl(''),
+  popupForm = new FormGroup({
+    nameFieldForm: new FormControl(''),
+    descriptionFieldForm: new FormControl(''),
   });
 
   open = false;
