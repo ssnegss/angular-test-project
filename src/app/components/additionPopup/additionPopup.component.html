@@ -1,0 +1,22 @@
+<button tuiButton type="button" size="m" (click)="showDialog()">Show</button>
+<ng-template
+  let-observer
+  [tuiDialogOptions]="{ label: 'Добавить элемент', size: 's' }"
+  [(tuiDialog)]="open"
+>
+  <form [formGroup]="exampleForm" (ngSubmit)="observer.complete()">
+    <p>Добавьте название, описание и дату выполнения</p>
+    <tui-input tuiAutoFocus formControlName="nameFieldForm">
+      Название
+    </tui-input>
+    <tui-input tuiAutoFocus formControlName="descriptionFieldForm">
+      Описание
+    </tui-input>
+    <tui-input tuiAutoFocus formControlName="dateFieldForm">
+      Дата выполнения
+    </tui-input>
+    <p>
+      <button tuiButton type="submit">Ok</button>
+    </p>
+  </form>
+</ng-template>
