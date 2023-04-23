@@ -1,8 +1,12 @@
 <tui-root>
   <div class="main">
     <nav class="navbar">
-      <a routerLink="/view"><ButtonComponent [buttonInner] = "viewPageButtonName"/></a>
-      <a routerLink="/edit"><ButtonComponent [buttonInner] = "editPageButtonName"/></a>
+      <a routerLink="/view"
+        ><button-component [buttonInner]="viewPageButtonName"
+      /></a>
+      <a routerLink="/edit"
+        ><button-component [buttonInner]="editPageButtonName"
+      /></a>
     </nav>
     <div class="router">
       <router-outlet></router-outlet>

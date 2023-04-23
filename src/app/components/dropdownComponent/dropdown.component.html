@@ -1,0 +1,31 @@
+<tui-hosted-dropdown
+  tuiDropdownAlign="right"
+  [sided]="true"
+  [content]="dropdown"
+  [(open)]="open"
+>
+  <button
+    tuiButton
+    type="button"
+    appearance="flat"
+    size="m"
+    iconRight="tuiIconChevronRight"
+    [pseudoActive]="open || null"
+  >
+    Move
+  </button>
+</tui-hosted-dropdown>
+<ng-template #dropdown let-close="close">
+  <tui-data-list>
+    <button tuiOption (click)="moveUp()" [disabled]="this.itemsIndex === 0">
+      Move Up
+    </button>
+    <button
+      tuiOption
+      (click)="moveDown()"
+      [disabled]="this.itemsIndex === this.itemsArr.length - 1"
+    >
+      Move Down
+    </button>
+  </tui-data-list>
+</ng-template>

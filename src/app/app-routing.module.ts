@@ -8,7 +8,6 @@ const routes: Routes = [
   { path: 'edit', component: EditingPageComponent },
   { path: 'view', component: ViewPageComponent },
 
-  // otherwise redirect to home
   { path: '**', redirectTo: 'view' },
 ];
 

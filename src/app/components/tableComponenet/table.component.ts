@@ -1,18 +1,25 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
 import { ItemService } from '../../services/ItemService';
 import { IItem } from '../../models/item';
 
 @Component({
-  selector: 'TableComponent',
+  selector: 'table-component',
   templateUrl: './table.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TuiTableComponent {
-  readonly columns = ['name', 'creationDate', 'completionDate', 'actions'];
+export class TableComponent {
+  constructor(private ItemService: ItemService) {}
+
+  readonly columns = [
+    'move',
+    'name',
+    'creationDate',
+    'completionDate',
+    'actions',
+  ];
 
   items: IItem[] = [];
-
-  constructor(private ItemService: ItemService) {}
+  dropdownOpen = false;
 
   ngOnInit() {
     this.items = this.ItemService.getItems();

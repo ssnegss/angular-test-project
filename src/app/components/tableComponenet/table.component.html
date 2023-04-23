@@ -1,6 +1,7 @@
 <table tuiTable [columns]="columns">
   <thead>
     <tr tuiThGroup>
+      <th *tuiHead="'move'" tuiTh [sorter]="null"></th>
       <th *tuiHead="'name'" tuiTh>Name</th>
       <th *tuiHead="'creationDate'" tuiTh>creationDate</th>
       <th *tuiHead="'completionDate'" tuiTh>completionDate</th>
@@ -8,11 +9,17 @@
     </tr>
   </thead>
   <tbody
-    *tuiLet="items | tuiTableSort as sortedUsers"
+    *tuiLet="items | tuiTableSort as sortedItems"
     tuiTbody
-    [data]="sortedUsers"
+    [data]="sortedItems"
   >
-    <tr *ngFor="let item of sortedUsers; let index = index" tuiTr>
+    <tr *ngFor="let item of sortedItems; let index = index" tuiTr>
+      <td *tuiCell="'move'" tuiTd>
+        <dropdown-component
+          [itemsArr]="sortedItems"
+          [itemsIndex]="index"
+        ></dropdown-component>
+      </td>
       <td *tuiCell="'name'" tuiTd>{{ item.name }}</td>
       <td *tuiCell="'creationDate'" tuiTd>
         {{ item.creationDate }}

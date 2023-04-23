@@ -2,11 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdditionPopupComponent } from './additionPopup.component';
 import { TuiInputDateTimeModule, TuiInputModule } from '@taiga-ui/kit';
-import {
-  TuiButtonModule,
-  TuiRootModule,
-  TuiDialogModule,
-} from '@taiga-ui/core';
+import { TuiButtonModule, TuiDialogModule } from '@taiga-ui/core';
 
 @NgModule({
   declarations: [AdditionPopupComponent],
@@ -16,7 +12,6 @@ import {
     TuiInputDateTimeModule,
     TuiButtonModule,
     TuiDialogModule,
-    TuiRootModule,
     TuiInputModule,
   ],
   exports: [AdditionPopupComponent],

@@ -1,22 +1,15 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  EventEmitter,
-  Output,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { IItem } from '../../models/item';
 import { ItemService } from '../../services/ItemService';
 
 @Component({
-  selector: 'AdditionPopupComponent',
+  selector: 'addition-popup-component',
   templateUrl: './additionPopup.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AdditionPopupComponent {
   constructor(private ItemService: ItemService) {}
-
-  @Output() itemCreated = new EventEmitter<IItem>();
 
   popupForm = new FormGroup({
     nameFieldForm: new FormControl(),
@@ -62,7 +55,6 @@ export class AdditionPopupComponent {
     };
     this.ItemService.addItem(item);
     this.popupForm.reset();
-    this.itemCreated.emit(item);
     console.log(item);
   }
 }
