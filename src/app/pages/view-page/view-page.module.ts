@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { TuiButtonModule } from '@taiga-ui/core';
+import {
+  TuiButtonModule,
+  TuiRootModule,
+  TuiDialogModule,
+} from '@taiga-ui/core';
+import { TuiInputModule } from '@taiga-ui/kit';
 
 import { ViewPageComponent } from './view-page.component';
 import { AdditionalPopupModule } from '../../components/additionPopup/additionPopup.module';
-import { TuiInputModule } from '@taiga-ui/kit';
-import { TuiRootModule, TuiDialogModule } from '@taiga-ui/core';
 
 @NgModule({
   declarations: [ViewPageComponent],

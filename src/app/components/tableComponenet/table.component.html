@@ -1,0 +1,38 @@
+<table tuiTable [columns]="columns">
+  <thead>
+    <tr tuiThGroup>
+      <th *tuiHead="'name'" tuiTh>Name</th>
+      <th *tuiHead="'creationDate'" tuiTh>creationDate</th>
+      <th *tuiHead="'completionDate'" tuiTh>completionDate</th>
+      <th *tuiHead="'actions'" tuiTh [sorter]="null"></th>
+    </tr>
+  </thead>
+  <tbody
+    *tuiLet="items | tuiTableSort as sortedUsers"
+    tuiTbody
+    [data]="sortedUsers"
+  >
+    <tr *ngFor="let item of sortedUsers; let index = index" tuiTr>
+      <td *tuiCell="'name'" tuiTd>{{ item.name }}</td>
+      <td *tuiCell="'creationDate'" tuiTd>
+        {{ item.creationDate }}
+      </td>
+      <td *tuiCell="'completionDate'" tuiTd>
+        <div>{{ item.completionDate }}</div>
+      </td>
+      <td *tuiCell="'actions'" tuiTd>
+        <button
+          tuiIconButton
+          appearance="flat"
+          size="s"
+          icon="tuiIconTrash"
+          title="Remove"
+          shape="rounded"
+          type="button"
+          class="remove"
+          (click)="remove(item)"
+        ></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
