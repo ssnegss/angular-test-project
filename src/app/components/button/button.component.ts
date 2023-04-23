@@ -1,10 +1,10 @@
 import { Input, ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'button-component',
+  selector: 'ButtonComponent',
   templateUrl: './button.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ButtonComponent {
+export class TuiButtonComponent {
   @Input() buttonInner: string = "";
 }

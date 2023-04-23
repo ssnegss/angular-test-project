@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { IItem } from '../../models/item';
 
 @Component({
-  selector: 'app-item',
+  selector: 'ItemComponent',
   templateUrl: './item.component.html',
 })
 export class ItemComponent {

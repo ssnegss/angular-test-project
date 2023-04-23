@@ -16,10 +16,10 @@ import { EditingPageModule } from './pages/editing-page/editing-page.module';
 import { ViewPageModule } from './pages/view-page/view-page.module';
 
 import { ItemComponent } from './components/item/item.component';
-import { ButtonComponent } from './components/button/button.component';
+import { TuiButtonComponent } from './components/button/button.component';
 
 @NgModule({
-  declarations: [AppComponent, ItemComponent, ButtonComponent],
+  declarations: [AppComponent, ItemComponent, TuiButtonComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -3,11 +3,11 @@ import { ItemService } from '../../services/ItemService';
 import { IItem } from '../../models/item';
 
 @Component({
-  selector: 'tui-table-example-2',
+  selector: 'TableComponent',
   templateUrl: './table.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TuiTableExample2 {
+export class TuiTableComponent {
   readonly columns = ['name', 'creationDate', 'completionDate', 'actions'];
 
   items: IItem[] = [];

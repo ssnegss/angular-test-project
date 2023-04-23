@@ -9,7 +9,7 @@ import { IItem } from '../../models/item';
 import { ItemService } from '../../services/ItemService';
 
 @Component({
-  selector: 'additionPopupComponent',
+  selector: 'AdditionPopupComponent',
   templateUrl: './additionPopup.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
