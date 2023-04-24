@@ -8,6 +8,10 @@
   ></viewInfo-popup-component
 ></ng-template>
 
+<input type="text" [(ngModel)]="nameFilter" placeholder="Name" />
+<input type="date" [(ngModel)]="dateFromFilter" placeholder="Date from" />
+<input type="date" [(ngModel)]="dateToFilter" placeholder="Date to" />
+
 <table tuiTable [columns]="columns">
   <thead>
     <tr tuiThGroup>
@@ -15,11 +19,17 @@
       <th tuiTh>Name</th>
       <th tuiTh>creationDate</th>
       <th tuiTh>completionDate</th>
-      <th tuiTh [sorter]="null"></th>
+      <!-- <th tuiTh [sorter]="null"></th> -->
     </tr>
   </thead>
   <tbody *tuiLet="items" tuiTbody [data]="items">
-    <tr *ngFor="let item of items; let index = index" tuiTr>
+    <tr
+      *ngFor="
+        let item of items | filter : nameFilter : dateFromFilter : dateToFilter;
+        let index = index
+      "
+      tuiTr
+    >
       <td *tuiCell="'move'" tuiTd>
         <dropdown-component
           [itemsArr]="items"
