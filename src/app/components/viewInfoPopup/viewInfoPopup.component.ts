@@ -12,11 +12,6 @@ export class ViewInfoPopupComponent {
   @Input() item: any;
   @Input() observer: any;
 
-  // ngOnInit() {
-  //   const date = new Date(); // текущая дата
-  //   this.item.creationDate = moment(date).format('YYYY-MM-DD');
-  // }
-
   viewInfoPopupForm = new FormGroup({
     viewNameFieldForm: new FormControl(),
     viewDescriptionFieldForm: new FormControl(),

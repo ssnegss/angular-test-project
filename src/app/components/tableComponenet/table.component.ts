@@ -25,20 +25,8 @@ export class TableComponent {
 
   popupIsOpened = false;
 
-  convertDateToStr(items: IItem[]) {
-    for (let item in items) {
-      const creationDate = items[item].creationDate;
-      const completionDate = items[item].completionDate;
-      items[item].creationDateString =
-        moment(creationDate).format('YYYY-MM-DD HH:MM');
-      items[item].completionDateString =
-        moment(completionDate).format('YYYY-MM-DD HH:MM');
-    }
-  }
-
   ngOnInit() {
     this.items = this.ItemService.getItems();
-    this.convertDateToStr(this.items);
   }
 
   openDialog(item: IItem) {

@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import * as moment from 'moment';
 import { IItem } from '../../models/item';
 import { ItemService } from '../../services/ItemService';
 
@@ -46,16 +47,25 @@ export class AdditionPopupComponent {
     return inputCompletionDate;
   };
 
+  convertDateToStr(Date: Date) {
+    const DateString = moment(Date).format('YYYY-MM-DD HH:MM');
+    return DateString;
+  }
+
   onSubmit() {
+    const inputCreationDate = new Date();
     const inputCompletionDate = this.convertTuiTime();
+    const inputCreationDateString = this.convertDateToStr(inputCreationDate);
+    const inputCompletionDateString =
+      this.convertDateToStr(inputCompletionDate);
 
     const item: IItem = {
       name: this.popupForm.controls.nameFieldForm.value,
       description: this.popupForm.controls.descriptionFieldForm.value,
-      creationDate: new Date(),
+      creationDate: inputCreationDate,
       completionDate: inputCompletionDate,
-      creationDateString: '',
-      completionDateString: '',
+      creationDateString: inputCreationDateString,
+      completionDateString: inputCompletionDateString,
     };
     this.ItemService.addItem(item);
     this.popupForm.reset();
