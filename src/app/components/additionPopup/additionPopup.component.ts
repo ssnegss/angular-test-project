@@ -48,7 +48,7 @@ export class AdditionPopupComponent {
   };
 
   convertDateToStr(Date: Date) {
-    const DateString = moment(Date).format('YYYY-MM-DD HH:MM');
+    const DateString = moment(Date).format('DD-MM-YYYY HH:mm');
     return DateString;
   }
 
