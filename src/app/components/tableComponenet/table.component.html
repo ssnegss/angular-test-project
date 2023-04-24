@@ -1,3 +1,13 @@
+<ng-template
+  let-observer
+  [tuiDialogOptions]="{ label: 'Данные элемента', size: 's' }"
+  [(tuiDialog)]="popupIsOpened"
+  ><viewInfo-popup-component
+    [item]="item"
+    [observer]="observer"
+  ></viewInfo-popup-component
+></ng-template>
+
 <table tuiTable [columns]="columns">
   <thead>
     <tr tuiThGroup>
@@ -20,14 +30,26 @@
           [itemsIndex]="index"
         ></dropdown-component>
       </td>
-      <td *tuiCell="'name'" tuiTd>{{ item.name }}</td>
-      <td *tuiCell="'creationDate'" tuiTd>
+      <td *tuiCell="'name'" tuiTd (click)="openDialog(item)" class="rowButton">
+        {{ item.name }}
+      </td>
+      <td
+        *tuiCell="'creationDate'"
+        tuiTd
+        (click)="openDialog(item)"
+        class="rowButton"
+      >
         {{ item.creationDate }}
       </td>
-      <td *tuiCell="'completionDate'" tuiTd>
+      <td
+        *tuiCell="'completionDate'"
+        tuiTd
+        (click)="openDialog(item)"
+        class="rowButton"
+      >
         <div>{{ item.completionDate }}</div>
       </td>
-      <td *tuiCell="'actions'" tuiTd>
+      <!-- <td *tuiCell="'actions'" tuiTd>
         <button
           tuiIconButton
           appearance="flat"
@@ -39,7 +61,7 @@
           class="remove"
           (click)="remove(item)"
         ></button>
-      </td>
+      </td> -->
     </tr>
   </tbody>
 </table>

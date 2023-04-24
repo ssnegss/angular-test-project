@@ -1,0 +1,41 @@
+<form [formGroup]="viewInfoPopupForm" (ngSubmit)="observer.complete()">
+  <tui-input
+    tuiAutoFocus
+    formControlName="viewNameFieldForm"
+    name="name"
+    [(ngModel)]="item.name"
+    [readOnly]="true"
+  >
+    Название
+  </tui-input>
+  <tui-input
+    tuiAutoFocus
+    formControlName="viewDescriptionFieldForm"
+    name="descriprion"
+    [(ngModel)]="item.description"
+    [readOnly]="true"
+  >
+    Описание
+  </tui-input>
+  <tui-input
+    tuiAutoFocus
+    formControlName="viewCreationDateFieldForm"
+    name="creationDate"
+    [(ngModel)]="item.creationDate"
+    [readOnly]="true"
+  >
+    Дата создания
+  </tui-input>
+  <tui-input
+    tuiAutoFocus
+    formControlName="viewCompletionDateFieldForm"
+    name="completionDate"
+    [(ngModel)]="item.completionDate"
+    [readOnly]="true"
+  >
+    Дата завершения
+  </tui-input>
+  <p>
+    <button tuiButton type="submit">Ok</button>
+  </p>
+</form>

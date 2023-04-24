@@ -20,8 +20,6 @@ export class DropdownComponent {
   @Input() itemsArr: [] = [];
   @Input() itemsIndex: number = NaN;
 
-  readonly items = ['Up', 'Down'];
-
   open = false;
 
   onClick(): void {
