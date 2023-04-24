@@ -8,20 +8,21 @@
   >
     Название
   </tui-input>
-  <tui-input
-    tuiAutoFocus
+
+  <tui-text-area
     formControlName="viewDescriptionFieldForm"
     name="descriprion"
+    [expandable]="true"
+    [rows]="8"
     [(ngModel)]="item.description"
     [readOnly]="true"
+    >Описание</tui-text-area
   >
-    Описание
-  </tui-input>
   <tui-input
     tuiAutoFocus
     formControlName="viewCreationDateFieldForm"
     name="creationDate"
-    [(ngModel)]="item.creationDate"
+    [(ngModel)]="item.creationDateString"
     [readOnly]="true"
   >
     Дата создания
@@ -30,7 +31,7 @@
     tuiAutoFocus
     formControlName="viewCompletionDateFieldForm"
     name="completionDate"
-    [(ngModel)]="item.completionDate"
+    [(ngModel)]="item.completionDateString"
     [readOnly]="true"
   >
     Дата завершения

@@ -3,4 +3,6 @@ export interface IItem {
   description: string;
   creationDate: Date;
   completionDate: Date;
+  creationDateString: string;
+  completionDateString: string;
 }

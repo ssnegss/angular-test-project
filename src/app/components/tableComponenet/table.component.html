@@ -39,7 +39,7 @@
         (click)="openDialog(item)"
         class="rowButton"
       >
-        {{ item.creationDate }}
+        {{ item.creationDateString }}
       </td>
       <td
         *tuiCell="'completionDate'"
@@ -47,7 +47,7 @@
         (click)="openDialog(item)"
         class="rowButton"
       >
-        <div>{{ item.completionDate }}</div>
+        <div>{{ item.completionDateString }}</div>
       </td>
       <!-- <td *tuiCell="'actions'" tuiTd>
         <button

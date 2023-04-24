@@ -11,12 +11,14 @@ export class ItemService {
     return this.items;
   }
 
-  addItem(user: {
+  addItem(item: {
     name: string;
     description: string;
     creationDate: Date;
     completionDate: Date;
+    creationDateString: string;
+    completionDateString: string;
   }) {
-    this.items.push(user);
+    this.items.push(item);
   }
 }

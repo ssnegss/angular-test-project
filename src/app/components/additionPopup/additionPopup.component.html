@@ -11,13 +11,13 @@
     <tui-input tuiAutoFocus formControlName="nameFieldForm" name="name">
       Название
     </tui-input>
-    <tui-input
-      tuiAutoFocus
+    <tui-text-area
       formControlName="descriptionFieldForm"
       name="descriprion"
+      [expandable]="true"
+      [rows]="8"
+      >Описание</tui-text-area
     >
-      Описание
-    </tui-input>
     <tui-input-date-time toNativeDate formControlName="completionDateFieldForm">
       Дата и время
       <input tuiTextfield placeholder="" />

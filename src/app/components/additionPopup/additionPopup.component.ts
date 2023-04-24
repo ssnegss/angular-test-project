@@ -22,6 +22,8 @@ export class AdditionPopupComponent {
     description: '',
     creationDate: new Date(),
     completionDate: new Date(),
+    creationDateString: '',
+    completionDateString: '',
   };
 
   open = false;
@@ -52,6 +54,8 @@ export class AdditionPopupComponent {
       description: this.popupForm.controls.descriptionFieldForm.value,
       creationDate: new Date(),
       completionDate: inputCompletionDate,
+      creationDateString: '',
+      completionDateString: '',
     };
     this.ItemService.addItem(item);
     this.popupForm.reset();

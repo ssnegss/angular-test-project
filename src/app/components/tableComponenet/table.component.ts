@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
+import * as moment from 'moment';
 import { ItemService } from '../../services/ItemService';
 import { IItem } from '../../models/item';
 
@@ -24,12 +25,23 @@ export class TableComponent {
 
   popupIsOpened = false;
 
-  ngOnInit() {
-    this.items = this.ItemService.getItems();
+  convertDateToStr(items: IItem[]) {
+    for (let item in items) {
+      const creationDate = items[item].creationDate;
+      const completionDate = items[item].completionDate;
+      items[item].creationDateString =
+        moment(creationDate).format('YYYY-MM-DD HH:MM');
+      items[item].completionDateString =
+        moment(completionDate).format('YYYY-MM-DD HH:MM');
+    }
   }
 
-  openDialog(item: any) {
-    console.log(item);
+  ngOnInit() {
+    this.items = this.ItemService.getItems();
+    this.convertDateToStr(this.items);
+  }
+
+  openDialog(item: IItem) {
     this.popupIsOpened = true;
     this.item = item;
   }
