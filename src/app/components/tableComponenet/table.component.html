@@ -11,22 +11,18 @@
 <table tuiTable [columns]="columns">
   <thead>
     <tr tuiThGroup>
-      <th *tuiHead="'move'" tuiTh [sorter]="null"></th>
-      <th *tuiHead="'name'" tuiTh>Name</th>
-      <th *tuiHead="'creationDate'" tuiTh>creationDate</th>
-      <th *tuiHead="'completionDate'" tuiTh>completionDate</th>
-      <th *tuiHead="'actions'" tuiTh [sorter]="null"></th>
+      <th tuiTh></th>
+      <th tuiTh>Name</th>
+      <th tuiTh>creationDate</th>
+      <th tuiTh>completionDate</th>
+      <th tuiTh [sorter]="null"></th>
     </tr>
   </thead>
-  <tbody
-    *tuiLet="items | tuiTableSort as sortedItems"
-    tuiTbody
-    [data]="sortedItems"
-  >
-    <tr *ngFor="let item of sortedItems; let index = index" tuiTr>
+  <tbody *tuiLet="items" tuiTbody [data]="items">
+    <tr *ngFor="let item of items; let index = index" tuiTr>
       <td *tuiCell="'move'" tuiTd>
         <dropdown-component
-          [itemsArr]="sortedItems"
+          [itemsArr]="items"
           [itemsIndex]="index"
         ></dropdown-component>
       </td>

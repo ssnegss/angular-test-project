@@ -4,6 +4,7 @@ import {
   ViewChild,
   Input,
 } from '@angular/core';
+import { IItem } from '../../models/item';
 import { TuiHostedDropdownComponent } from '@taiga-ui/core';
 import { MoveItemsService } from '../../services/MoveItemsService';
 
@@ -17,7 +18,7 @@ export class DropdownComponent {
   @ViewChild(TuiHostedDropdownComponent)
   component?: TuiHostedDropdownComponent;
 
-  @Input() itemsArr: [] = [];
+  @Input() itemsArr: IItem[] = [];
   @Input() itemsIndex: number = NaN;
 
   open = false;
