@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
 import { ItemService } from '../../services/ItemService';
-import { OpenViewInfoPopupService } from '../../services/OpenViewInfoPopupService';
 import { IItem } from '../../models/item';
 
 @Component({

@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { IItem } from '../../models/item';
-import { OpenViewInfoPopupService } from '../../services/OpenViewInfoPopupService';
 
 @Component({
   selector: 'viewInfo-popup-component',
