@@ -5,13 +5,12 @@ import { IItem } from '../models/item';
 export class ItemService {
   private items: IItem[] = [];
 
-  constructor() {}
-
   getItems() {
     return this.items;
   }
 
   addItem(item: {
+    id: number;
     name: string;
     description: string;
     creationDate: Date;
@@ -23,6 +22,7 @@ export class ItemService {
   }
 
   removeItem(removeItem: {
+    id: number;
     name: string;
     description: string;
     creationDate: Date;
@@ -30,7 +30,7 @@ export class ItemService {
     creationDateString: string;
     completionDateString: string;
   }) {
-    this.items = this.items.filter((item) => item !== removeItem)
+    this.items = this.items.filter((item) => item.id !== removeItem.id);
     return this.items;
   }
 }

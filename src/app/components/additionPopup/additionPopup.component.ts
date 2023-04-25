@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import * as moment from 'moment';
 import { IItem } from '../../models/item';
 import { ItemService } from '../../services/ItemService';
+import { IdGeneratorService } from '../../services/IdGeneratorService';
 
 @Component({
   selector: 'addition-popup-component',
@@ -18,7 +19,10 @@ export class AdditionPopupComponent {
     completionDateFieldForm: new FormControl(),
   });
 
-  constructor(private ItemService: ItemService) {
+  constructor(
+    private ItemService: ItemService,
+    private idGenerator: IdGeneratorService
+  ) {
     this.popupForm.controls.completionDateFieldForm.setValidators([
       Validators.required,
       Validators.pattern(/^\d{2}.\d{2}.\d{4},\d{2}:\d{2}$/),
@@ -26,6 +30,7 @@ export class AdditionPopupComponent {
   }
 
   newItem: IItem = {
+    id: NaN,
     name: '',
     description: '',
     creationDate: new Date(),
@@ -66,6 +71,7 @@ export class AdditionPopupComponent {
       this.convertDateToStr(inputCompletionDate);
 
     const item: IItem = {
+      id: this.idGenerator.generateId(),
       name: this.popupForm.controls.nameFieldForm.value ?? '',
       description: this.popupForm.controls.descriptionFieldForm.value ?? '',
       creationDate: inputCreationDate,

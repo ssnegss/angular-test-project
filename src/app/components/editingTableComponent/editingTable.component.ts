@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ItemService } from '../../services/ItemService';
+import { IdGeneratorService } from '../../services/IdGeneratorService';
 import { IItem } from '../../models/item';
 
 @Component({
@@ -8,7 +9,10 @@ import { IItem } from '../../models/item';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EditingTableComponent {
-  constructor(private ItemService: ItemService) {}
+  constructor(
+    private ItemService: ItemService,
+    private idGenerator: IdGeneratorService
+  ) {}
 
   readonly columns = [
     'name',
@@ -33,7 +37,10 @@ export class EditingTableComponent {
   }
 
   copyItem(item: IItem) {
-    this.ItemService.addItem(item);
+    const copiedItem = Object.assign({}, item, {
+      id: this.idGenerator.generateId(),
+    });
+    this.ItemService.addItem(copiedItem);
   }
 
   nameFilter: string = '';
