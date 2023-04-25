@@ -8,11 +8,46 @@
   ></viewInfo-popup-component
 ></ng-template>
 
-<input type="text" [(ngModel)]="nameFilter" placeholder="Name" />
-<input type="date" [(ngModel)]="dateFromFilter" placeholder="Date from" />
-<input type="date" [(ngModel)]="dateToFilter" placeholder="Date to" />
+<table class="sortingTable" tuiTable>
+  <thead>
+    <tr tuiThGroup>
+      <th tuiTh>Name</th>
+      <th tuiTh>Completion Date From</th>
+      <th tuiTh>Completion Date To</th>
+    </tr>
+  </thead>
+  <tbody tuiTbody>
+    <tr>
+      <td tuiTd>
+        <input
+          class="sortingTable__filterField"
+          type="text"
+          [(ngModel)]="nameFilter"
+          placeholder="Name"
+        />
+      </td>
+      <td tuiTd>
+        <input
+          class="sortingTable__filterField"
+          type="date"
+          [(ngModel)]="dateFromFilter"
+          placeholder="Date from"
+          type="date"
+        />
+      </td>
+      <td tuiTd>
+        <input
+          class="sortingTable__filterField"
+          type="date"
+          [(ngModel)]="dateToFilter"
+          placeholder="Date to"
+        />
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-<table tuiTable [columns]="columns">
+<table class="dataTable" tuiTable [columns]="columns">
   <thead>
     <tr tuiThGroup>
       <th tuiTh></th>

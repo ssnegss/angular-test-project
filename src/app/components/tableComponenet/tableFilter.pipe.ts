@@ -28,6 +28,7 @@ export class FilterPipe implements PipeTransform {
         item.completionDate.getTime() < new Date(dateFromFilter).getTime()
       ) {
         console.log(dateFromFilter);
+        console.log(item.completionDate);
         return false;
       }
       if (
