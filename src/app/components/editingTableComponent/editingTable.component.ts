@@ -12,7 +12,13 @@ import { IItem } from '../../models/item';
 export class EditingTableComponent {
   constructor(private ItemService: ItemService) {}
 
-  readonly columns = ['name', 'creationDate', 'completionDate', 'actions'];
+  readonly columns = [
+    'name',
+    'creationDate',
+    'completionDate',
+    'copyItem',
+    'actions',
+  ];
 
   items: IItem[] = [];
   item: any;
@@ -28,11 +34,13 @@ export class EditingTableComponent {
     this.item = item;
   }
 
+  copyItem(item: IItem) {
+    this.ItemService.addItem(item);
+  }
+
   nameFilter: string = '';
   dateFromFilter: string = '';
   dateToFilter: string = '';
-
-  // -- Дополнительно: удаление элемента из списка
 
   remove(itemToRemove: IItem): void {
     this.items = this.ItemService.removeItem(itemToRemove);

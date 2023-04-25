@@ -12,9 +12,10 @@
   <thead>
     <tr tuiThGroup>
       <th tuiTh>Name</th>
-      <th tuiTh>creationDate</th>
-      <th tuiTh>completionDate</th>
-      <th tuiTh></th>
+      <th tuiTh>Creation Date</th>
+      <th tuiTh>Completion Date</th>
+      <th tuiTh>Copy Item</th>
+      <th tuiTh>Delete Item</th>
     </tr>
   </thead>
   <tbody *tuiLet="items" tuiTbody [data]="items">
@@ -27,6 +28,11 @@
       </td>
       <td *tuiCell="'completionDate'" tuiTd class="rowButton">
         <div>{{ item.completionDateString }}</div>
+      </td>
+      <td *tuiCell="'copyItem'" tuiTd>
+        <button tuiButton appearance="flat" (click)="copyItem(item)">
+          Copy Item
+        </button>
       </td>
       <td *tuiCell="'actions'" tuiTd>
         <button
