@@ -54,7 +54,6 @@
       <th tuiTh>Name</th>
       <th tuiTh>creationDate</th>
       <th tuiTh>completionDate</th>
-      <th tuiTh [sorter]="null"></th>
     </tr>
   </thead>
   <tbody *tuiLet="items" tuiTbody [data]="items">
@@ -89,19 +88,6 @@
         class="rowButton"
       >
         <div>{{ item.completionDateString }}</div>
-      </td>
-      <td *tuiCell="'actions'" tuiTd>
-        <button
-          tuiIconButton
-          appearance="flat"
-          size="s"
-          icon="tuiIconTrash"
-          title="Remove"
-          shape="rounded"
-          type="button"
-          class="remove"
-          (click)="remove(item)"
-        ></button>
       </td>
     </tr>
   </tbody>

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FilterPipe } from './tableFilter.pipe';
 import { TuiDialogModule } from '@taiga-ui/core';
 
 import { TuiLetModule } from '@taiga-ui/cdk';
@@ -13,15 +12,14 @@ import {
   TuiTextAreaModule,
 } from '@taiga-ui/kit';
 
-import { TableComponent } from './table.component';
+import { EditingTableComponent } from './editingTable.component';
 import { DropdownModule } from '../dropdownComponent/dropdown.module';
 import { MoveItemsService } from '../../services/MoveItemsService';
 import { TuiButtonModule } from '@taiga-ui/core';
 import { ViewInfoPopupModule } from '../viewInfoPopup/viewInfoPopup.module';
 
 @NgModule({
-  declarations: [TableComponent, 
-    FilterPipe
+  declarations: [EditingTableComponent, 
   ],
   imports: [
     DropdownModule,
@@ -38,6 +36,6 @@ import { ViewInfoPopupModule } from '../viewInfoPopup/viewInfoPopup.module';
     TuiButtonModule,
   ],
   providers: [MoveItemsService],
-  exports: [TableComponent],
+  exports: [EditingTableComponent],
 })
-export class TableModule {}
+export class EditingTableModule {}

@@ -21,4 +21,16 @@ export class ItemService {
   }) {
     this.items.unshift(item);
   }
+
+  removeItem(removeItem: {
+    name: string;
+    description: string;
+    creationDate: Date;
+    completionDate: Date;
+    creationDateString: string;
+    completionDateString: string;
+  }) {
+    this.items = this.items.filter((item) => item !== removeItem)
+    return this.items;
+  }
 }

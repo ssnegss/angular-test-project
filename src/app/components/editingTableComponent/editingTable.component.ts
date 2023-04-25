@@ -5,15 +5,14 @@ import { ItemService } from '../../services/ItemService';
 import { IItem } from '../../models/item';
 
 @Component({
-  selector: 'table-component',
-  templateUrl: './table.component.html',
-  styleUrls: ['./table.component.scss'],
+  selector: 'editing-table-component',
+  templateUrl: './editingTable.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TableComponent {
+export class EditingTableComponent {
   constructor(private ItemService: ItemService) {}
 
-  readonly columns = ['move', 'name', 'creationDate', 'completionDate'];
+  readonly columns = ['name', 'creationDate', 'completionDate', 'actions'];
 
   items: IItem[] = [];
   item: any;
@@ -32,4 +31,10 @@ export class TableComponent {
   nameFilter: string = '';
   dateFromFilter: string = '';
   dateToFilter: string = '';
+
+  // -- Дополнительно: удаление элемента из списка
+
+  remove(itemToRemove: IItem): void {
+    this.items = this.ItemService.removeItem(itemToRemove);
+  }
 }
