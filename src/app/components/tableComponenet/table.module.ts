@@ -10,7 +10,6 @@ import {
   TuiInputDateTimeModule,
   TuiInputDateModule,
   TuiInputModule,
-  TuiTextAreaModule,
 } from '@taiga-ui/kit';
 
 import { TableComponent } from './table.component';
@@ -20,18 +19,16 @@ import { TuiButtonModule } from '@taiga-ui/core';
 import { ViewInfoPopupModule } from '../viewInfoPopup/viewInfoPopup.module';
 
 @NgModule({
-  declarations: [TableComponent, 
-    FilterPipe
-  ],
+  declarations: [TableComponent, FilterPipe],
   imports: [
     DropdownModule,
+    ViewInfoPopupModule,
     FormsModule,
     ReactiveFormsModule,
+    CommonModule,
     TuiInputModule,
     TuiInputDateModule,
     TuiInputDateTimeModule,
-    ViewInfoPopupModule,
-    CommonModule,
     TuiDialogModule,
     TuiLetModule,
     TuiTableModule,

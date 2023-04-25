@@ -14,6 +14,14 @@ export class EditingTableComponent {
     private idGenerator: IdGeneratorService
   ) {}
 
+  readonly columns = [
+    'name',
+    'creationDate',
+    'completionDate',
+    'copyItem',
+    'actions',
+  ];
+
   items: IItem[] = [];
   item: any;
 

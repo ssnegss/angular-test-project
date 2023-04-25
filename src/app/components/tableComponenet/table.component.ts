@@ -6,7 +6,7 @@ import { IItem } from '../../models/item';
   selector: 'table-component',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.Default,
 })
 export class TableComponent {
   constructor(private ItemService: ItemService) {}
