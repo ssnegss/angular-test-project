@@ -1,41 +1,48 @@
 <form [formGroup]="viewInfoPopupForm" (ngSubmit)="observer.complete()">
-  <tui-input
-    tuiAutoFocus
-    formControlName="viewNameFieldForm"
-    name="name"
-    [(ngModel)]="item.name"
-    [readOnly]="true"
-  >
-    Название
-  </tui-input>
-
-  <tui-text-area
-    formControlName="viewDescriptionFieldForm"
-    name="descriprion"
-    [expandable]="true"
-    [rows]="8"
-    [(ngModel)]="item.description"
-    [readOnly]="true"
-    >Описание</tui-text-area
-  >
-  <tui-input
-    tuiAutoFocus
-    formControlName="viewCreationDateFieldForm"
-    name="creationDate"
-    [(ngModel)]="item.creationDateString"
-    [readOnly]="true"
-  >
-    Дата создания
-  </tui-input>
-  <tui-input
-    tuiAutoFocus
-    formControlName="viewCompletionDateFieldForm"
-    name="completionDate"
-    [(ngModel)]="item.completionDateString"
-    [readOnly]="true"
-  >
-    Дата завершения
-  </tui-input>
+  <p>
+    <tui-input
+      tuiAutoFocus
+      formControlName="viewNameFieldForm"
+      name="name"
+      [(ngModel)]="item.name"
+      [readOnly]="true"
+    >
+      Название
+    </tui-input>
+  </p>
+  <p>
+    <tui-text-area
+      formControlName="viewDescriptionFieldForm"
+      name="descriprion"
+      [expandable]="true"
+      [rows]="8"
+      [(ngModel)]="item.description"
+      [readOnly]="true"
+      >Описание</tui-text-area
+    >
+  </p>
+  <p>
+    <tui-input
+      tuiAutoFocus
+      formControlName="viewCreationDateFieldForm"
+      name="creationDate"
+      [(ngModel)]="item.creationDateString"
+      [readOnly]="true"
+    >
+      Дата создания
+    </tui-input>
+  </p>
+  <p>
+    <tui-input
+      tuiAutoFocus
+      formControlName="viewCompletionDateFieldForm"
+      name="completionDate"
+      [(ngModel)]="item.completionDateString"
+      [readOnly]="true"
+    >
+      Дата завершения
+    </tui-input>
+  </p>
   <p>
     <button tuiButton type="submit">Ok</button>
   </p>
