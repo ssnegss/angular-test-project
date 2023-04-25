@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
-import { IItem } from './models/item';
 
 @Component({
   selector: 'app-root',

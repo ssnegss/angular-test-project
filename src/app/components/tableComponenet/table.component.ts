@@ -1,6 +1,4 @@
-import { ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import * as moment from 'moment';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ItemService } from '../../services/ItemService';
 import { IItem } from '../../models/item';
 

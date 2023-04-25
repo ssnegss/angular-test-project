@@ -1,7 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import * as moment from 'moment';
-import { IItem } from '../../models/item';
 
 @Component({
   selector: 'viewInfo-popup-component',
