@@ -1,14 +1,4 @@
-<ng-template
-  let-observer
-  [tuiDialogOptions]="{ label: 'Данные элемента', size: 's' }"
-  [(tuiDialog)]="popupIsOpened"
-  ><viewInfo-popup-component
-    [item]="item"
-    [observer]="observer"
-  ></viewInfo-popup-component
-></ng-template>
-
-<table class="dataTable" tuiTable [columns]="columns">
+<table style="margin: 1rem" class="dataTable" tuiTable>
   <thead>
     <tr tuiThGroup>
       <th tuiTh>Name</th>

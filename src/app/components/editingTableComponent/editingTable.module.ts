@@ -9,7 +9,6 @@ import {
   TuiInputDateTimeModule,
   TuiInputDateModule,
   TuiInputModule,
-  TuiTextAreaModule,
 } from '@taiga-ui/kit';
 
 import { EditingTableComponent } from './editingTable.component';
@@ -19,8 +18,7 @@ import { TuiButtonModule } from '@taiga-ui/core';
 import { ViewInfoPopupModule } from '../viewInfoPopup/viewInfoPopup.module';
 
 @NgModule({
-  declarations: [EditingTableComponent, 
-  ],
+  declarations: [EditingTableComponent],
   imports: [
     DropdownModule,
     FormsModule,

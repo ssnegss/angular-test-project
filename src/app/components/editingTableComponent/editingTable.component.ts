@@ -6,7 +6,7 @@ import { IItem } from '../../models/item';
 @Component({
   selector: 'editing-table-component',
   templateUrl: './editingTable.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.Default,
 })
 export class EditingTableComponent {
   constructor(
@@ -14,26 +14,11 @@ export class EditingTableComponent {
     private idGenerator: IdGeneratorService
   ) {}
 
-  readonly columns = [
-    'name',
-    'creationDate',
-    'completionDate',
-    'copyItem',
-    'actions',
-  ];
-
   items: IItem[] = [];
   item: any;
 
-  popupIsOpened = false;
-
   ngOnInit() {
     this.items = this.ItemService.getItems();
-  }
-
-  openDialog(item: IItem) {
-    this.popupIsOpened = true;
-    this.item = item;
   }
 
   copyItem(item: IItem) {
@@ -42,10 +27,6 @@ export class EditingTableComponent {
     });
     this.ItemService.addItem(copiedItem);
   }
-
-  nameFilter: string = '';
-  dateFromFilter: string = '';
-  dateToFilter: string = '';
 
   remove(itemToRemove: IItem): void {
     this.items = this.ItemService.removeItem(itemToRemove);
