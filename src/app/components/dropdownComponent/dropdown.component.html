@@ -11,19 +11,26 @@
     size="m"
     iconRight="tuiIconChevronRight"
     [pseudoActive]="open || null"
+    i18n
   >
     Move
   </button>
 </tui-hosted-dropdown>
 <ng-template #dropdown let-close="close">
   <tui-data-list>
-    <button tuiOption (click)="moveUp()" [disabled]="this.itemsIndex === 0">
+    <button
+      tuiOption
+      (click)="moveUp()"
+      [disabled]="this.itemsIndex === 0"
+      i18n
+    >
       Move Up
     </button>
     <button
       tuiOption
       (click)="moveDown()"
       [disabled]="this.itemsIndex === this.itemsArr.length - 1"
+      i18n
     >
       Move Down
     </button>

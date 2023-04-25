@@ -1,11 +1,11 @@
 <table style="margin: 1rem" class="dataTable" tuiTable [columns]="columns">
   <thead>
     <tr tuiThGroup>
-      <th tuiTh>Name</th>
-      <th tuiTh>Creation Date</th>
-      <th tuiTh>Completion Date</th>
-      <th tuiTh>Copy Item</th>
-      <th tuiTh>Delete Item</th>
+      <th tuiTh i18n>Name</th>
+      <th tuiTh i18n>Creation Date</th>
+      <th tuiTh i18n>Completion Date</th>
+      <th tuiTh i18n>Copy Item</th>
+      <th tuiTh i18n>Delete Item</th>
     </tr>
   </thead>
   <tbody *tuiLet="items" tuiTbody [data]="items">
@@ -20,7 +20,7 @@
         <div>{{ item.completionDateString }}</div>
       </td>
       <td *tuiCell="'copyItem'" tuiTd>
-        <button tuiButton appearance="flat" (click)="copyItem(item)">
+        <button tuiButton appearance="flat" (click)="copyItem(item)" i18n>
           Copy Item
         </button>
       </td>

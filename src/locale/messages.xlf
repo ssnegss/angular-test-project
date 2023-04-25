@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="4435047848786673234" datatype="html">
+        <source> Add Item
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/additionPopup/additionPopup.component.html</context>
+          <context context-type="linenumber">8,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3891152114593885591" datatype="html">
+        <source>Element addition</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/additionPopup/additionPopup.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4288209611016465404" datatype="html">
+        <source>Add title, description and date</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/additionPopup/additionPopup.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9053645969247364433" datatype="html">
+        <source> Title </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/additionPopup/additionPopup.component.html</context>
+          <context context-type="linenumber">22,24</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/viewInfoPopup/viewInfoPopup.component.html</context>
+          <context context-type="linenumber">10,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4902817035128594900" datatype="html">
+        <source>Description</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/additionPopup/additionPopup.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/viewInfoPopup/viewInfoPopup.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6100754834590258203" datatype="html">
+        <source> Date and time <x id="TAG_INPUT" ctype="x-input" equiv-text="&lt;input tuiTextfield placeholder=&quot;&quot; /&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/additionPopup/additionPopup.component.html</context>
+          <context context-type="linenumber">41,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="577038887888857351" datatype="html">
+        <source> Add </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/additionPopup/additionPopup.component.html</context>
+          <context context-type="linenumber">47,49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="718664953917016933" datatype="html">
+        <source> <x id="INTERPOLATION" equiv-text="{{ buttonInner }}"/>
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/button/button.component.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8389636361036124153" datatype="html">
+        <source> Move </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dropdownComponent/dropdown.component.html</context>
+          <context context-type="linenumber">15,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8460419102424852132" datatype="html">
+        <source> Move Up </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dropdownComponent/dropdown.component.html</context>
+          <context context-type="linenumber">26,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2228218082913313542" datatype="html">
+        <source> Move Down </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dropdownComponent/dropdown.component.html</context>
+          <context context-type="linenumber">34,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8953033926734869941" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/editingTableComponent/editingTable.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/tableComponenet/table.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/tableComponenet/table.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6004681856910260407" datatype="html">
+        <source>Creation Date</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/editingTableComponent/editingTable.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/tableComponenet/table.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="884804856543330114" datatype="html">
+        <source>Completion Date</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/editingTableComponent/editingTable.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/tableComponenet/table.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2285893757797489851" datatype="html">
+        <source>Copy Item</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/editingTableComponent/editingTable.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4151553779532669447" datatype="html">
+        <source>Delete Item</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/editingTableComponent/editingTable.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5884146192323908839" datatype="html">
+        <source> Copy Item </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/editingTableComponent/editingTable.component.html</context>
+          <context context-type="linenumber">23,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7618280416108842340" datatype="html">
+        <source>Element</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/tableComponenet/table.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4163272119298020373" datatype="html">
+        <source>Filters</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/tableComponenet/table.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2075355600325867946" datatype="html">
+        <source>Completion Date From</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/tableComponenet/table.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7282917134274885700" datatype="html">
+        <source>Completion Date To</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/tableComponenet/table.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6856981935030444519" datatype="html">
+        <source>Elements</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/tableComponenet/table.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4224586883509413327" datatype="html">
+        <source> Creation date </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/viewInfoPopup/viewInfoPopup.component.html</context>
+          <context context-type="linenumber">34,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2644575274781724552" datatype="html">
+        <source> Completion date </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/viewInfoPopup/viewInfoPopup.component.html</context>
+          <context context-type="linenumber">46,48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8720977247725652816" datatype="html">
+        <source>Ok</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/viewInfoPopup/viewInfoPopup.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -4,20 +4,23 @@
   size="m"
   (click)="showDialog()"
   class="tui-space_right-3 tui-space_left-10 tui-space_top-2 tui-space_bottom-3"
+  i18n
 >
   Add Item
 </button>
-<ng-template
-  let-observer
-  [tuiDialogOptions]="{ label: 'Добавить элемент', size: 's' }"
-  [(tuiDialog)]="popupIsOpened"
->
+<ng-template let-observer [(tuiDialog)]="popupIsOpened">
+  <h1 class="popupHeader" i18n>Element addition</h1>
   <div [hidden]="!popupIsOpened">
     <form [formGroup]="popupForm" (ngSubmit)="onSubmit(); observer.complete()">
-      <p>Добавьте название, описание и дату выполнения</p>
+      <p i18n>Add title, description and date</p>
       <p>
-        <tui-input tuiAutoFocus formControlName="nameFieldForm" name="name">
-          Название
+        <tui-input
+          tuiAutoFocus
+          formControlName="nameFieldForm"
+          name="name"
+          i18n
+        >
+          Title
         </tui-input>
       </p>
       <p>
@@ -26,21 +29,23 @@
           name="descriprion"
           [expandable]="true"
           [rows]="8"
-          >Описание</tui-text-area
+          i18n
+          >Description</tui-text-area
         >
       </p>
       <p>
         <tui-input-date-time
           toNativeDate
           formControlName="completionDateFieldForm"
+          i18n
         >
-          Дата и время
+          Date and time
           <input tuiTextfield placeholder="" />
         </tui-input-date-time>
       </p>
       <p>
-        <button tuiButton type="submit" [disabled]="popupForm.invalid">
-          Добавить
+        <button tuiButton type="submit" [disabled]="popupForm.invalid" i18n>
+          Add
         </button>
       </p>
     </form>

@@ -1,19 +1,19 @@
-<ng-template
-  let-observer
-  [tuiDialogOptions]="{ label: 'Данные элемента', size: 's' }"
-  [(tuiDialog)]="popupIsOpened"
-  ><viewInfo-popup-component
+<ng-template let-observer [(tuiDialog)]="popupIsOpened">
+  <h1 class="popupHeader" i18n>Element</h1>
+  <viewInfo-popup-component
     [item]="item"
     [observer]="observer"
   ></viewInfo-popup-component
 ></ng-template>
 
+<h1 class="tableHeader" i18n>Filters</h1>
+
 <table class="sortingTable" tuiTable>
   <thead>
     <tr tuiThGroup>
-      <th tuiTh>Name</th>
-      <th tuiTh>Completion Date From</th>
-      <th tuiTh>Completion Date To</th>
+      <th tuiTh i18n>Name</th>
+      <th tuiTh i18n>Completion Date From</th>
+      <th tuiTh i18n>Completion Date To</th>
     </tr>
   </thead>
   <tbody tuiTbody>
@@ -47,13 +47,15 @@
   </tbody>
 </table>
 
+<h1 class="tableHeader" i18n>Elements</h1>
+
 <table class="dataTable" tuiTable [columns]="columns">
   <thead>
     <tr tuiThGroup>
       <th tuiTh></th>
-      <th tuiTh>Name</th>
-      <th tuiTh>creationDate</th>
-      <th tuiTh>completionDate</th>
+      <th tuiTh i18n>Name</th>
+      <th tuiTh i18n>Creation Date</th>
+      <th tuiTh i18n>Completion Date</th>
     </tr>
   </thead>
   <tbody *tuiLet="items" tuiTbody [data]="items">

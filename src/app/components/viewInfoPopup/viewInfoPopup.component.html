@@ -6,8 +6,9 @@
       name="name"
       [(ngModel)]="item.name"
       [readOnly]="true"
+      i18n
     >
-      Название
+      Title
     </tui-input>
   </p>
   <p>
@@ -18,7 +19,8 @@
       [rows]="8"
       [(ngModel)]="item.description"
       [readOnly]="true"
-      >Описание</tui-text-area
+      i18n
+      >Description</tui-text-area
     >
   </p>
   <p>
@@ -28,8 +30,9 @@
       name="creationDate"
       [(ngModel)]="item.creationDateString"
       [readOnly]="true"
+      i18n
     >
-      Дата создания
+      Creation date
     </tui-input>
   </p>
   <p>
@@ -39,11 +42,12 @@
       name="completionDate"
       [(ngModel)]="item.completionDateString"
       [readOnly]="true"
+      i18n
     >
-      Дата завершения
+      Completion date
     </tui-input>
   </p>
   <p>
-    <button tuiButton type="submit">Ok</button>
+    <button tuiButton type="submit" i18n>Ok</button>
   </p>
 </form>

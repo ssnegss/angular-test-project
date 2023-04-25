@@ -8,6 +8,7 @@ import { IdGeneratorService } from '../../services/IdGeneratorService';
 @Component({
   selector: 'addition-popup-component',
   templateUrl: './additionPopup.component.html',
+  styleUrls: ['./additionPopup.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AdditionPopupComponent {
