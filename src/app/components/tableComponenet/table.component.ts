@@ -13,18 +13,12 @@ import { IItem } from '../../models/item';
 export class TableComponent {
   constructor(private ItemService: ItemService) {}
 
-  // filtersForm = new FormGroup({
-  //   nameFilter: new FormControl(''),
-  //   dateFromFilter: new FormControl(''),
-  //   dateToFilter: new FormControl(''),
-  // });
-
   readonly columns = [
     'move',
     'name',
     'creationDate',
     'completionDate',
-    // 'actions',
+    'actions',
   ];
 
   items: IItem[] = [];
@@ -39,9 +33,6 @@ export class TableComponent {
   openDialog(item: IItem) {
     this.popupIsOpened = true;
     this.item = item;
-    console.log(this.nameFilter);
-    console.log(this.dateFromFilter);
-    console.log(this.dateToFilter);
   }
 
   nameFilter: string = '';
@@ -50,7 +41,7 @@ export class TableComponent {
 
   // -- Дополнительно: удаление элемента из списка
 
-  // remove(itemToRemove: IItem): void {
-  //   this.items = this.items.filter((item) => item !== itemToRemove);
-  // }
+  remove(itemToRemove: IItem): void {
+    this.items = this.items.filter((item) => item !== itemToRemove);
+  }
 }

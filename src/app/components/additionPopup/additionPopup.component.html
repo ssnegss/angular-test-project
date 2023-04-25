@@ -4,26 +4,39 @@
 <ng-template
   let-observer
   [tuiDialogOptions]="{ label: 'Добавить элемент', size: 's' }"
-  [(tuiDialog)]="open"
+  [(tuiDialog)]="popupIsOpened"
 >
-  <form [formGroup]="popupForm" (ngSubmit)="observer.complete()">
-    <p>Добавьте название, описание и дату выполнения</p>
-    <tui-input tuiAutoFocus formControlName="nameFieldForm" name="name">
-      Название
-    </tui-input>
-    <tui-text-area
-      formControlName="descriptionFieldForm"
-      name="descriprion"
-      [expandable]="true"
-      [rows]="8"
-      >Описание</tui-text-area
-    >
-    <tui-input-date-time toNativeDate formControlName="completionDateFieldForm">
-      Дата и время
-      <input tuiTextfield placeholder="" />
-    </tui-input-date-time>
-    <p>
-      <button tuiButton type="submit" (click)="onSubmit()">Ok</button>
-    </p>
-  </form>
+  <div [hidden]="!popupIsOpened">
+    <form [formGroup]="popupForm" (ngSubmit)="onSubmit(); observer.complete()">
+      <p>Добавьте название, описание и дату выполнения</p>
+      <p>
+        <tui-input tuiAutoFocus formControlName="nameFieldForm" name="name">
+          Название
+        </tui-input>
+      </p>
+      <p>
+        <tui-text-area
+          formControlName="descriptionFieldForm"
+          name="descriprion"
+          [expandable]="true"
+          [rows]="8"
+          >Описание</tui-text-area
+        >
+      </p>
+      <p>
+        <tui-input-date-time
+          toNativeDate
+          formControlName="completionDateFieldForm"
+        >
+          Дата и время
+          <input tuiTextfield placeholder="" />
+        </tui-input-date-time>
+      </p>
+      <p>
+        <button tuiButton type="submit" [disabled]="popupForm.invalid">
+          Добавить
+        </button>
+      </p>
+    </form>
+  </div>
 </ng-template>

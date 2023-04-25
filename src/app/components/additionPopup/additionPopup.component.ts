@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import * as moment from 'moment';
 import { IItem } from '../../models/item';
 import { ItemService } from '../../services/ItemService';
@@ -10,13 +10,20 @@ import { ItemService } from '../../services/ItemService';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AdditionPopupComponent {
-  constructor(private ItemService: ItemService) {}
+  popupIsOpened = false;
 
   popupForm = new FormGroup({
-    nameFieldForm: new FormControl(),
-    descriptionFieldForm: new FormControl(),
+    nameFieldForm: new FormControl('', Validators.required),
+    descriptionFieldForm: new FormControl('', Validators.required),
     completionDateFieldForm: new FormControl(),
   });
+
+  constructor(private ItemService: ItemService) {
+    this.popupForm.controls.completionDateFieldForm.setValidators([
+      Validators.required,
+      Validators.pattern(/^\d{2}.\d{2}.\d{4},\d{2}:\d{2}$/),
+    ]);
+  }
 
   newItem: IItem = {
     name: '',
@@ -27,14 +34,13 @@ export class AdditionPopupComponent {
     completionDateString: '',
   };
 
-  open = false;
-
   showDialog(): void {
-    this.open = true;
+    this.popupIsOpened = true;
   }
 
   convertTuiTime = () => {
     const getDate = this.popupForm.controls.completionDateFieldForm;
+
     const getDay = getDate.value[0];
     const getTime = getDate.value[1];
     const inputCompletionDate = new Date(
@@ -60,8 +66,8 @@ export class AdditionPopupComponent {
       this.convertDateToStr(inputCompletionDate);
 
     const item: IItem = {
-      name: this.popupForm.controls.nameFieldForm.value,
-      description: this.popupForm.controls.descriptionFieldForm.value,
+      name: this.popupForm.controls.nameFieldForm.value ?? '',
+      description: this.popupForm.controls.descriptionFieldForm.value ?? '',
       creationDate: inputCreationDate,
       completionDate: inputCompletionDate,
       creationDateString: inputCreationDateString,
@@ -69,6 +75,5 @@ export class AdditionPopupComponent {
     };
     this.ItemService.addItem(item);
     this.popupForm.reset();
-    console.log(item);
   }
 }

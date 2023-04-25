@@ -19,6 +19,6 @@ export class ItemService {
     creationDateString: string;
     completionDateString: string;
   }) {
-    this.items.push(item);
+    this.items.unshift(item);
   }
 }
